@@ -1,0 +1,9 @@
+FROM node:14.17.4
+WORKDIR /app
+COPY package.json .
+RUN npm install
+COPY . .
+ENV REACT_APP_NAME=myName
+CMD npm run build
+
+FROM nginx
