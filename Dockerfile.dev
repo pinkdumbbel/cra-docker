@@ -4,6 +4,6 @@ COPY package.json .
 RUN npm install
 COPY . .
 ENV REACT_APP_NAME=myName
-CMD npm run build
+CMD npm start
 
-FROM nginx
+#FROM nginx
